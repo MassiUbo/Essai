@@ -9,7 +9,6 @@ import ihm.Controleur;
 import ihm.Visualiseur;
 import sma.Agent;
 import sma.Agent2;
-import sun.management.resources.agent;
 
 import java.util.HashMap;
 
