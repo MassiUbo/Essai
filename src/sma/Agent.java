@@ -32,12 +32,15 @@ public class Agent extends Thread {
 	 */
 	
 	public void run() {
-		while (!Thread.currentThread().isInterrupted()) {
+
+		while (!Thread.currentThread().isInterrupted()) {						
 			try {
-			sedeplacer();
-			//sedeplacer2();
-			//sedeplacer3();
-			} catch (InterruptedException e) {
+			   sedeplacer();
+			// sedeplacer2();
+			// sedeplacer3();
+			
+			} 
+			    catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
@@ -48,8 +51,9 @@ public class Agent extends Thread {
 	 * Déplacement à la fois alétoire et intelligent
 	 * @throws InterruptedException
 	 */
+	
 	public void  sedeplacer() throws InterruptedException {
-
+		
 		ArrayList<Case> voisins = this.voiture.getVoisinage();
 		System.out.println(voisins.size());
 		Case voisin = null;
@@ -57,9 +61,9 @@ public class Agent extends Thread {
 		int i = (int) (Math.random() * voisins.size());
 		voisin = voisins.get(i);
 		
-
 		int v = (int) (Math.random() * 4);
 		boolean bool = true;
+		
 		// Case voisin2 = null;
 
 		while (bool) {

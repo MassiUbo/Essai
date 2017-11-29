@@ -37,8 +37,9 @@ public class Exploration {
 	 *            la taille en x de la carte
 	 * @param ySize
 	 *            la taille en y de la carte
+	 * @throws InterruptedException 
 	 */
-	public Exploration(int xSize, int ySize) {
+	public Exploration(int xSize, int ySize) throws InterruptedException {
 
 		carte = new Carte(xSize, ySize);
 
@@ -73,8 +74,9 @@ public class Exploration {
 	/**
 	 * @param args
 	 *            the command line arguments
+	 * @throws InterruptedException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		int i = 0;
 		while (i < args.length) {
 			switch (args[i]) {
@@ -95,7 +97,7 @@ public class Exploration {
 			xsize = 50;
 			ysize = 50;
 		}
-
+   
 		new Exploration(xsize, ysize);
 	}
 
