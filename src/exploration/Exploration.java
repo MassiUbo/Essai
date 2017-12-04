@@ -8,7 +8,6 @@ package exploration;
 import ihm.Controleur;
 import ihm.Visualiseur;
 import sma.Agent;
-import sma.Agent2;
 
 import java.util.HashMap;
 
@@ -26,10 +25,10 @@ public class Exploration {
 	private static boolean RANDOM_SIZE = false;
 	private final int VEHICULE_NBR = 4;
 
-	private Agent2 agent1;
-	private Agent2 agent2;
-	private Agent2 agent3;
-	private Agent2 agent4;
+	private Agent agent1;
+	private Agent agent2;
+	private Agent agent3;
+	private Agent agent4;
 
 	/**
 	 *
@@ -50,10 +49,10 @@ public class Exploration {
 		Vehicule v3 = getVehicules().get(2);
 		Vehicule v4 = getVehicules().get(3);
 
-		agent1 = new Agent2(v1);
-		agent2 = new Agent2(v2);
-		agent3 = new Agent2(v3);
-		agent4 = new Agent2(v4);
+		agent1 = new Agent(v1);
+		agent2 = new Agent(v2);
+		agent3 = new Agent(v3);
+		agent4 = new Agent(v4);
 
 		agent1.start(); // (rouge)
 		agent2.start(); // verte
